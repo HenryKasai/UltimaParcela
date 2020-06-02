@@ -6,19 +6,19 @@ namespace UltimaParcela
     {
         static void Main(string[] args)
         {
+            decimal vlrtotal;
+            int parcelas;
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Insira o valor total a ser pago.");
             
-            string vlrtotal = Console.ReadLine();
-            decimal vlrtotaldecimal = Convert.ToDecimal(vlrtotal);
+            Console.WriteLine("Insira o valor total a ser pago.");
+            vlrtotal = Convert.ToDecimal(Console.ReadLine());
 
             Console.WriteLine("Insira a quantidade total de parcelas mensais (sem juros)");
+            parcelas = Convert.ToInt32(Console.ReadLine());
 
-            string parcelas = Console.ReadLine();
-            int parcelasint = Convert.ToInt32(parcelas);
-            decimal vlrparcela = vlrtotaldecimal / parcelasint;
+            decimal vlrparcela = vlrtotal / parcelas;
             DateTime agora = DateTime.Now;
-            DateTime final = agora.AddMonths(parcelasint);
+            DateTime final = agora.AddMonths(parcelas);
             string finalstring = Convert.ToString(final);
 
             Console.ForegroundColor = ConsoleColor.Green;

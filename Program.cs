@@ -19,7 +19,6 @@ namespace UltimaParcela
             decimal vlrparcela = vlrtotal / parcelas;
             DateTime agora = DateTime.Now;
             DateTime final = agora.AddMonths(parcelas);
-            string finalstring = Convert.ToString(final);
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Sua última parcela será em {final.ToShortDateString()}, no valor de R${vlrparcela:N2}.");

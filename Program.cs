@@ -20,6 +20,7 @@ namespace UltimaParcela
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Sua última parcela será em {final.ToShortDateString()}, no valor de R${vlrparcela:N2}.");
+            Console.ReadKey();
             Console.ForegroundColor = ConsoleColor.Gray;
 
         }
